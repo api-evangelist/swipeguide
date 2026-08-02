@@ -1,0 +1,49 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+api: L2L Dispatch API
+base_url: https://{company}.leading2lean.com/api/1.0/
+transport: HTTPS (SSL required)
+authentication:
+  style: api-key
+  see: authentication/swipeguide-authentication.yml
+http_methods:
+  GET: retrieve records via URL query parameters
+  POST: create/update records; delete when `_action=delete` is included
+  PUT: update records
+  DELETE: remove records by id
+content_negotiation:
+  default_format: json
+  alternate_format: xml
+  format_param: format=xml
+  timestamp_precision: >-
+    Milliseconds by default; pass `l2lfmt_microseconds=true` for microsecond precision.
+pagination:
+  style: limit-offset
+  params:
+    limit: results per page (maximum 2000)
+    offset: starting position
+  max_page_size: 2000
+  response_fields: [offset, limit]
+error_envelope:
+  style: custom-success-flag
+  success_field: success
+  error_field: error
+  errors_field: errors
+  note: >-
+    Do not rely on the HTTP status code for success/failure — validation failures
+    return HTTP 200 with `success=false` and populated `error`/`errors` fields.
+  see: errors/swipeguide-error-model.yml
+versioning:
+  scheme: uri-path
+  current: '1.0'
+  path_segment: /api/1.0/
+  see: lifecycle/swipeguide-lifecycle.yml
+idempotency:
+  supported: false
+  note: No idempotency-key mechanism is documented for the L2L Dispatch API.
+rate_limiting:
+  documented_limit: false
+  guidance: >-
+    No explicit rate limit is published; the docs recommend intelligent throttling
+    with exponential backoff on timeouts or HTTP 500, and avoiding DOS-like burst patterns.

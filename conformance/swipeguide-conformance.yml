@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.l2l.com/security-compliance
+api: L2L Dispatch API
+standards:
+- id: oauth2
+  conforms: false
+  evidence: API uses static API-key authentication, not OAuth 2.0.
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use a custom success/error envelope with HTTP 200 on failures.
+- id: rest
+  conforms: true
+  evidence: HTTP REST resources under /api/1.0/ with GET/POST/PUT/DELETE and JSON payloads.
+- id: pagination-limit-offset
+  conforms: true
+  evidence: limit (max 2000) + offset query params with offset/limit response fields.
+- id: soc2-type2
+  conforms: true
+  evidence: Compliance program based on SOC 2 Type 2 (l2l.com/security-compliance).
+- id: nist-800-171
+  conforms: true
+  evidence: Compliance program based on NIST 800-171.
+- id: iso-13485
+  conforms: true
+  evidence: ISO 13485 listed on the security & compliance page.
+- id: iso-55000
+  conforms: true
+  evidence: ISO 55000 listed on the security & compliance page.
+- id: cfr-21-part-11
+  conforms: true
+  evidence: 21 CFR Part 11 listed on the security & compliance page.
+- id: itar
+  conforms: true
+  evidence: ITAR listed on the security & compliance page.
+- id: dfars
+  conforms: true
+  evidence: DFARS listed on the security & compliance page.
+- id: gdpr
+  conforms: true
+  evidence: GDPR listed on the security & compliance page.
+- id: ccpa
+  conforms: true
+  evidence: CCPA listed on the security & compliance page.

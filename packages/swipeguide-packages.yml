@@ -1,0 +1,56 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/leading2lean
+notes: >-
+  L2L (formerly Leading2Lean, which acquired SwipeGuide) publishes first-party
+  L2L Dispatch API integration client libraries ("LES integration") on GitHub in
+  several languages, plus a C# Trace SDK. They are distributed as MIT-licensed
+  GitHub source repositories, not via public package registries (npm/PyPI/etc.
+  return 404 for these names as of 2026-07-21).
+packages:
+- language: python
+  registry: github
+  name: les-python3
+  url: https://github.com/leading2lean/les-python3
+  install: git clone https://github.com/leading2lean/les-python3
+  license: MIT
+  official: true
+- language: go
+  registry: github
+  name: les-go
+  url: https://github.com/leading2lean/les-go
+  install: go get github.com/leading2lean/les-go
+  license: MIT
+  official: true
+- language: javascript
+  registry: github
+  name: les-javascript
+  url: https://github.com/leading2lean/les-javascript
+  install: git clone https://github.com/leading2lean/les-javascript
+  license: MIT
+  official: true
+- language: swift
+  registry: github
+  name: les-swift
+  url: https://github.com/leading2lean/les-swift
+  install: git clone https://github.com/leading2lean/les-swift
+  license: MIT
+  official: true
+- language: shell
+  registry: github
+  name: les-bash
+  url: https://github.com/leading2lean/les-bash
+  install: git clone https://github.com/leading2lean/les-bash
+  license: MIT
+  official: true
+- language: csharp
+  registry: github
+  name: trace-sdk
+  url: https://github.com/leading2lean/trace-sdk
+  install: git clone https://github.com/leading2lean/trace-sdk
+  description: SDK used for communication with the L2L Trace API.
+  official: true
+aggregator:
+  name: les-integration
+  url: https://github.com/leading2lean/les-integration
+  description: Convenience project with each LES integration repository added as a submodule.

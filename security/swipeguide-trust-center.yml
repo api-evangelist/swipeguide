@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.l2l.com/trust-center
+url: https://www.l2l.com/trust-center
+portal_vendor: Drata
+portal_url: https://app.drata.com/trust/9cbbb9fe-0c38-11ee-865f-029d78a187d9
+compliance_page: https://www.l2l.com/security-compliance
+certifications:
+- SOC 2 Type 2
+- NIST 800-171
+- 21 CFR Part 11
+- ISO 13485
+- ISO 55000
+- ITAR
+- DFARS
+- GDPR
+- CCPA
+recognition:
+- LNS Research highest rating for Security & Privacy
+privacy_contact: privacy@l2l.com
+evidence:
+- source: https://www.l2l.com/security-compliance
+  keywords: [soc 2 type 2, nist 800-171, gdpr, ccpa, trust center]
+- source: https://www.l2l.com/trust-center
+  keywords: [drata, trust center]

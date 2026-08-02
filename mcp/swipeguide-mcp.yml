@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+notes: >-
+  No official hosted/remote MCP server was found for L2L / L2L Dispatch. This is a
+  DERIVED candidate tool list mapping a few high-value read operations from the L2L
+  Dispatch REST API onto MCP tools, as a starting point only. No apis.yml MCPServer
+  pointer is wired because no real server exists.
+server:
+  name: l2l-dispatch
+  transport: http
+  url: null
+tools:
+- name: list_sites
+  description: List sites (optionally filter active/test_site).
+  source_operation: GET /api/1.0/sites/
+- name: list_dispatches
+  description: List dispatches for an area/line/machine.
+  source_operation: GET /api/1.0/dispatches/
+- name: list_machines
+  description: List machines, optionally by line.
+  source_operation: GET /api/1.0/machines/
+- name: list_work_orders
+  description: List work orders.
+  source_operation: GET /api/1.0/workorders/
+- name: list_pitches
+  description: List production pitches.
+  source_operation: GET /api/1.0/pitches/

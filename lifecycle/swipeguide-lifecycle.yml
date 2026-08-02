@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+api: L2L Dispatch API
+versioning:
+  scheme: uri-path
+  current: '1.0'
+  path_segment: /api/1.0/
+changelog:
+  url: https://leading2lean.atlassian.net/wiki/spaces/LCL/overview
+  see: changelog/swipeguide-changelog.yml
+deprecation:
+  formal_policy: false
+  mechanism: per-endpoint markers in the API reference
+  markers:
+  - resource: Checklist Answers
+    path: /api/1.0/checklistsanswers/
+    status: DEPRECATED
+  - resource: Checklists
+    path: /api/1.0/checklists/
+    status: BETA
+  note: >-
+    Individual endpoints are annotated DEPRECATED or BETA in the reference; no
+    dated sunset/deprecation policy or Sunset/Deprecation header support is published.
+sla:
+  url: null
+  note: No public SLA/uptime target published.
+status_page: null

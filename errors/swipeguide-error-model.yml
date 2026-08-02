@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+format: custom-envelope
+api: L2L Dispatch API
+notes: >-
+  The L2L Dispatch API does not use RFC 9457 problem+json. Every response is a
+  JSON (or XML) object carrying a boolean `success` flag. Validation and business
+  errors are returned with HTTP 200 and `success=false`, so clients must inspect
+  the envelope rather than the HTTP status code.
+envelope:
+  success:
+    type: boolean
+    description: True when the operation succeeded; false when it failed.
+  error:
+    type: string
+    optional: true
+    description: Single error message when `success` is false.
+  errors:
+    type: array
+    optional: true
+    description: List of error messages, typically for validation failures.
+handling_guidance:
+- Always branch on the `success` field, not the HTTP status code.
+- On HTTP 500 or request timeouts, retry with exponential backoff.
+- Space requests to avoid DOS-like patterns.

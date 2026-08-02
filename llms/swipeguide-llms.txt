@@ -1,0 +1,35 @@
+# Swipeguide (L2L)
+
+> SwipeGuide was a frontline digital work-instruction platform for manufacturing, now acquired by L2L (formerly Leading2Lean); swipeguide.com redirects to l2l.com. L2L runs a Connected Manufacturing Operations platform (the L2L Dispatch Smart Manufacturing Platform) and exposes the L2L Dispatch REST API (v1.0) for reading and writing shop-floor data — sites, areas, lines, machines, dispatches, pitches, work orders, kaizen and more. API-key auth (query `auth`, `L2LAUTH` header, or POST body) with optional HMAC-SHA512 request signing; JSON default, XML optional; limit/offset pagination (max 2000); custom success/error envelope (HTTP 200 on validation failures).
+
+## APIs
+- [L2L Dispatch API — Documentation](https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation): REST reference for the L2L Dispatch platform, per-tenant base `https://{company}.leading2lean.com/api/1.0/`.
+- [API Code Examples](https://support.leading2lean.com/hc/en-us/articles/360051600711-API-Code-Examples): getting-started samples.
+- [APIs & Integration section](https://support.leading2lean.com/hc/en-us/sections/360010979571-APIs-Integration): full API reference section.
+
+## SDKs
+- [les-python3](https://github.com/leading2lean/les-python3): Python integration sample (MIT).
+- [les-go](https://github.com/leading2lean/les-go): Go integration (MIT).
+- [les-javascript](https://github.com/leading2lean/les-javascript): JavaScript integration (MIT).
+- [les-swift](https://github.com/leading2lean/les-swift): Swift integration (MIT).
+- [les-bash](https://github.com/leading2lean/les-bash): Bash integration (MIT).
+- [trace-sdk](https://github.com/leading2lean/trace-sdk): C# SDK for the L2L Trace API.
+- [GitHub org](https://github.com/leading2lean): all first-party repositories.
+
+## Repo artifacts
+- [Authentication](authentication/swipeguide-authentication.yml)
+- [Conventions](conventions/swipeguide-conventions.yml)
+- [Error model](errors/swipeguide-error-model.yml)
+- [Lifecycle](lifecycle/swipeguide-lifecycle.yml)
+- [Data model](data-model/swipeguide-data-model.yml)
+- [Sandbox / test sites](sandbox/swipeguide-sandbox.yml)
+- [Packages / SDKs](packages/swipeguide-packages.yml)
+- [Conformance](conformance/swipeguide-conformance.yml)
+
+## Docs
+- [Platform](https://www.l2l.com/platform)
+- [Integrations](https://www.l2l.com/platform/integrations)
+- [Blog](https://www.l2l.com/blog)
+- [Support / Help Center](https://support.leading2lean.com/)
+- [Security & Compliance](https://www.l2l.com/security-compliance)
+- [Trust Center (Drata)](https://www.l2l.com/trust-center)

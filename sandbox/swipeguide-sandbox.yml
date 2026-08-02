@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/leading2lean/les-python3
+docs: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+api: L2L Dispatch API
+notes: >-
+  The L2L Dispatch API separates test data from production at the Site level:
+  a Site can be flagged as a test site (`test_site=true`). L2L's own integration
+  samples validate that they are operating against a test site before writing, to
+  avoid mutating production shop-floor data. There is no separate sandbox host or
+  synthetic test-key prefix documented; test vs. production is scoped per Site
+  within a tenant.
+test_mode:
+  mechanism: per-site flag
+  parameter: test_site
+  filter_example: GET /api/1.0/sites/?test_site=true&active=true
+  guidance: >-
+    Integration code should confirm the target site returns test_site=true before
+    performing writes; production code operates against live sites.

@@ -1,7 +1,29 @@
 aid: swipeguide
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/swipeguide.png
 name: Swipeguide
-description: Swipeguide is a company surfaced as a portfolio company of speedinvest and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  SwipeGuide was a frontline digital work-instruction platform for manufacturing
+  that has since been acquired by L2L (formerly Leading2Lean); the swipeguide.com
+  domain now 301-redirects to l2l.com. L2L operates a Connected Workforce /
+  Connected Manufacturing Operations platform (the L2L Dispatch Smart
+  Manufacturing Platform) spanning maintenance, production monitoring, quality,
+  skills, and digital work instructions on the shop floor. It exposes the L2L
+  Dispatch REST API (v1.0) for reading and writing shop-floor data — sites,
+  areas, lines, machines, dispatches, pitches, work orders, kaizen and more —
+  authenticated with an API key (query auth, L2LAUTH header, or POST body) plus
+  optional HMAC-SHA512 request signing, returning JSON (default) or XML.
 url: https://raw.githubusercontent.com/api-evangelist/swipeguide/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +31,86 @@ x-backed-by:
 - speedinvest
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-notes: SwipeGuide acquired by L2L (Leading2Lean); swipeguide.com redirects to l2l.com. Enriched against the L2L Dispatch REST API surface.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Manufacturing
+- Work Instructions
+- Frontline
+- Shop Floor
+- Maintenance
+- Connected Worker
+- Smart Manufacturing
+- Industrial
+apis:
+- name: L2L Dispatch API
+  description: >-
+    REST API for the L2L Dispatch Smart Manufacturing Platform. HTTPS GET/POST/PUT/DELETE
+    over per-tenant hosts, API-key authenticated, JSON by default (XML optional). Covers
+    60+ shop-floor resources including sites, areas, lines, machines, dispatches, pitches,
+    work orders, checklists, kaizen, products and inventory.
+  humanURL: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+  baseURL: https://{company}.leading2lean.com/api/1.0/
+  properties:
+  - type: Authentication
+    url: authentication/swipeguide-authentication.yml
+  - type: Conventions
+    url: conventions/swipeguide-conventions.yml
+  - type: ErrorCatalog
+    url: errors/swipeguide-error-model.yml
+  - type: Lifecycle
+    url: lifecycle/swipeguide-lifecycle.yml
+  - type: DataModel
+    url: data-model/swipeguide-data-model.yml
+  - type: Sandbox
+    url: sandbox/swipeguide-sandbox.yml
+common:
+- type: Website
+  url: https://www.l2l.com/
+- type: Documentation
+  url: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+- type: APIReference
+  url: https://support.leading2lean.com/hc/en-us/sections/360010979571-APIs-Integration
+- type: GettingStarted
+  url: https://support.leading2lean.com/hc/en-us/articles/360051600711-API-Code-Examples
+- type: Support
+  url: https://support.leading2lean.com/
+- type: HelpCenter
+  url: https://www.l2l.com/customer-support
+- type: Blog
+  url: https://www.l2l.com/blog
+- type: GitHubOrganization
+  url: https://github.com/leading2lean
+- type: Integrations
+  url: https://www.l2l.com/platform/integrations
+- type: SignUp
+  url: https://www.l2l.com/get-started
+- type: TrustCenter
+  url: https://www.l2l.com/trust-center
+- type: Compliance
+  url: https://www.l2l.com/security-compliance
+- type: ChangeLog
+  url: https://leading2lean.atlassian.net/wiki/spaces/LCL/overview
+- type: Packages
+  url: packages/swipeguide-packages.yml
+- type: SDKs
+  url: packages/swipeguide-packages.yml
+- type: Conformance
+  url: conformance/swipeguide-conformance.yml
+- type: DomainSecurity
+  url: security/swipeguide-domain-security.yml
+- type: LLMsTxt
+  url: llms/swipeguide-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1

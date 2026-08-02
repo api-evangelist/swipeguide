@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+host: https://www.l2l.com
+probed: '2026-07-21'
+notes: >-
+  No /.well-known discovery documents are published on the L2L marketing host.
+  Absence is expected — the API is a per-tenant deployment behind login and does
+  not advertise OIDC/OAuth metadata or an API catalog at the public host.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+api: L2L Dispatch API
+changelog_url: https://leading2lean.atlassian.net/wiki/spaces/LCL/overview
+scheme: uri-path-version
+current_version: '1.0'
+notes: >-
+  The L2L Dispatch API reference links its change history to the L2L Confluence
+  space (LCL). A dated, structured entry list is not publicly exposed outside that
+  space; endpoint-level lifecycle is signalled inline in the reference via
+  DEPRECATED and BETA markers.
+recent_markers:
+- resource: Checklist Answers
+  status: DEPRECATED
+- resource: Checklists
+  status: BETA
+entries: []

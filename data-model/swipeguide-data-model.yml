@@ -1,0 +1,65 @@
+generated: '2026-07-21'
+method: derived
+source: https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation
+derived_from:
+- https://github.com/leading2lean/les-python3 (api/main.py relationship usage)
+- L2L Dispatch API resource reference (60+ endpoints under /api/1.0/)
+api: L2L Dispatch API
+notes: >-
+  Entity graph derived from the documented L2L Dispatch resource list and the
+  relationship usage in L2L's own python3 integration sample (Site -> Area ->
+  Line -> Machine, and Dispatch keyed to a Dispatch Type). id-reference field
+  names (area_id, line_id, machine_id, site) are taken from the sample query args.
+entities:
+- name: Site
+  path: /api/1.0/sites/
+  key_fields: [id, description, active, test_site]
+- name: Area
+  path: /api/1.0/areas/
+- name: Line
+  path: /api/1.0/lines/
+  key_fields: [id, area_id, active, enable_production]
+- name: Machine
+  path: /api/1.0/machines/
+  key_fields: [id, code]
+- name: DispatchType
+  path: /api/1.0/dispatchtypes/
+- name: Dispatch
+  path: /api/1.0/dispatches/
+- name: Pitch
+  path: /api/1.0/pitches/
+- name: WorkOrder
+  path: /api/1.0/workorders/
+- name: Product
+  path: /api/1.0/products/
+- name: User
+  path: /api/1.0/users/
+relationships:
+- from: Site
+  to: Area
+  type: has_many
+- from: Area
+  to: Line
+  type: has_many
+  via: area_id
+- from: Line
+  to: Machine
+  type: has_many
+- from: Dispatch
+  to: DispatchType
+  type: belongs_to
+  via: dispatchtype
+- from: Dispatch
+  to: Machine
+  type: belongs_to
+- from: UserTime
+  to: User
+  type: belongs_to
+resource_families:
+  operations: [dispatches, dispatchtypes, dispatchstatuses, dispatchnotes, dispatchtechnicians, actions, reasons]
+  assets: [sites, areas, lines, machines, machinegroups, technologies, valuestreams]
+  production: [pitches, pitchdetails, productorders, products, buildsequence, scrapdetails, scrapcategory]
+  maintenance: [workorders, workordercategories, spares, tooling, eventschedule, checklists]
+  inventory: [warehouses, binlocation, billofmaterials, vendors, unitsofmeasure, parts]
+  people: [users, usersites, usertimes, technicians, technicianareas, trades, contacts]
+  improvement: [kaizen, kaizencategory]
