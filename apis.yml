@@ -68,6 +68,8 @@ apis:
   - type: Sandbox
     url: sandbox/swipeguide-sandbox.yml
 common:
+- type: MCPServer
+  url: mcp/swipeguide-mcp.yml
 - type: Website
   url: https://www.l2l.com/
 - type: Documentation
