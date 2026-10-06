@@ -47,7 +47,7 @@ x-tier-reason: portfolio-lead
 x-notes: SwipeGuide acquired by L2L (Leading2Lean); swipeguide.com redirects to l2l.com. Enriched against the L2L Dispatch REST API surface.
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-10-06'
 tags:
 - Company
 - Manufacturing
@@ -81,6 +81,8 @@ apis:
   - type: Sandbox
     url: sandbox/swipeguide-sandbox.yml
 common:
+- url: https://www.l2l.com/blog/rss.xml
+  type: BlogRSS
 - type: X-MCPServerCandidate
   url: mcp/swipeguide-mcp.yml
   note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
