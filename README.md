@@ -64,6 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Swipeguide is a company surfaced as a portfolio company of speedinvest and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+SwipeGuide was a frontline digital work-instruction platform for manufacturing that has since been acquired by L2L (formerly Leading2Lean); the swipeguide.com domain now 301-redirects to l2l.com. L2L operates a Connected Workforce / Connected Manufacturing Operations platform (the L2L Dispatch Smart Manufacturing Platform) spanning maintenance, production monitoring, quality, skills, and digital work instructions on the shop floor. It exposes the L2L Dispatch REST API (v1.0) for reading and writing shop-floor data — sites, areas, lines, machines, dispatches, pitches, work orders, kaizen and more — authenticated with an API key (query auth, L2LAUTH header, or POST body) plus optional HMAC-SHA512 request signing, returning JSON (default) or XML.
 
-Backed by: speedinvest
+**Areas:** Company · Manufacturing · Work Instructions · Frontline · Shop Floor · Maintenance · Connected Worker · Smart Manufacturing · Industrial
+
+## Swipeguide on APIs.io
+
+Everything profiled for Swipeguide is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/swipeguide/](https://apis.io/providers/swipeguide/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [L2L Dispatch API](https://apis.io/apis/swipeguide/l2l-dispatch-api/) — REST API for the L2L Dispatch Smart Manufacturing Platform. HTTPS GET/POST/PUT/DELETE over per-tenant hosts, API-key authenticated, JSON by default (XML…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [l2l-dispatch](https://apis.io/servers/swipeguide/l2l-dispatch/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Swipeguide Authentication](https://apis.io/security/swipeguide/swipeguide-authentication/)
+- [Swipeguide Domain Security](https://apis.io/security/swipeguide/swipeguide-domain-security/)
+- [Swipeguide Trust Center](https://apis.io/security/swipeguide/swipeguide-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.l2l.com/)
+- [Documentation](https://support.leading2lean.com/hc/en-us/articles/360051148492-API-Documentation)
+- [Getting started](https://support.leading2lean.com/hc/en-us/articles/360051600711-API-Code-Examples)
+- [API reference](https://support.leading2lean.com/hc/en-us/sections/360010979571-APIs-Integration)
+- [Sign up](https://www.l2l.com/get-started)
+- [Support](https://support.leading2lean.com/)
+- [Changelog](https://leading2lean.atlassian.net/wiki/spaces/LCL/overview)
+- [Blog](https://www.l2l.com/blog)
+- [Compliance](https://www.l2l.com/security-compliance)
+- [Trust centre](https://www.l2l.com/trust-center)
+- [GitHub](https://github.com/leading2lean)
+
+## API Evangelist rating
+
+**Kin Score 29.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 28.9 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/swipeguide/](https://apis.io/providers/swipeguide/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Swipeguide: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/swipeguide/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
